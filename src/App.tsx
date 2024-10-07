@@ -8,7 +8,7 @@ interface Car {
   make: string;
   model: string;
   year: string;
-  price: string;
+  price: string | number;
   imageUrl: string;
 }
 
@@ -121,7 +121,7 @@ const Poster = () => {
                 name="model"
                 value={formData.model}
                 onChange={handleInputChange}
-                placeholder="Milage/Engine Model"
+                placeholder="Engine Model"
                 className="border p-2 rounded"
               />
               <input
@@ -209,7 +209,7 @@ const Poster = () => {
                   className="mt-4 h-48 w-full object-cover rounded-md"
                 />
                 <p className="mt-2 font-bold">
-                  Price: Tsh - <span className="font-normal">{formatPrice(car.price)}</span>
+                  Price: Tsh - <span className="font-normal">{car.price}</span>
                 </p>
               </div>
             ))}
