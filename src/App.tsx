@@ -167,7 +167,7 @@ const Poster = () => {
             <img
               src={Logo}
               alt="SMSCARZ Logo"
-              className="w-32 self-start object-cover"
+              className="w-32 self-start object-con"
             />
             <div className="w-fit ">
             <span className="text-5xl font-black">Ostrich Tanzania</span>
@@ -206,7 +206,7 @@ const Poster = () => {
                 <img
                   src={car.imageUrl}
                   alt={car.model}
-                  className="mt-4 h-48 w-full object-cover rounded-md"
+                  className="mt-4 h-48 w-full object-contain rounded-md"
                 />
                 <p className="mt-2 font-bold">
                   Price: Tsh - <span className="font-normal">{car.price}</span>
