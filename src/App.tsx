@@ -160,7 +160,7 @@ const Poster = () => {
         <div
           id="poster"
           ref={posterRef}
-          className="mx-auto p-4 rounded shadow-md bg-blue-700"
+          className="mx-auto p-4 rounded bg-blue-100"
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-8 bg-black p-4 rounded-xl text-white flex-row-reverse">
