@@ -100,8 +100,8 @@ const Poster = () => {
   };
 
   return (
-    <div className="p-8 bg-white ">
-      <div className=" mx-auto p-4 rounded shadow-md bg-white">
+    <div className="p-8 bg-red-500 ">
+      <div className=" mx-auto p-4 rounded shadow-md bg-green-600">
         {cars.length === 6 ? (
           ""
         ) : (
