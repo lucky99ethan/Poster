@@ -93,21 +93,21 @@ const Poster = () => {
   };
 
   return (
-    <div className="p-8">
-      <div className="max-w-screen-lg mx-auto p-4 rounded shadow-md">
+    <div className="p-8 bg-gray-100 min-h-screen">
+      <div className="max-w-screen-lg mx-auto p-4 rounded shadow-md bg-white">
         {cars.length === 6 ? (
           ""
         ) : (
           <div>
-            <h1 className="text-2xl font-bold mb-4">Add Car Details</h1>
-            <div className="mb-8">
+            <h1 className="text-3xl font-bold mb-6 text-center">Add Car Details</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <input
                 type="text"
                 name="make"
                 value={formData.make}
                 onChange={handleInputChange}
                 placeholder="Make"
-                className="border p-2 m-2"
+                className="border p-2 rounded"
               />
               <input
                 type="text"
@@ -115,7 +115,7 @@ const Poster = () => {
                 value={formData.model}
                 onChange={handleInputChange}
                 placeholder="Model"
-                className="border p-2 m-2"
+                className="border p-2 rounded"
               />
               <input
                 type="text"
@@ -123,7 +123,7 @@ const Poster = () => {
                 value={formData.year}
                 onChange={handleInputChange}
                 placeholder="Year"
-                className="border p-2 m-2"
+                className="border p-2 rounded"
               />
               <input
                 type="text"
@@ -131,17 +131,17 @@ const Poster = () => {
                 value={formData.price}
                 onChange={handleInputChange}
                 placeholder="Price"
-                className="border p-2 m-2"
+                className="border p-2 rounded"
               />
               <input
                 type="file"
                 name="image"
                 onChange={handleFileChange}
-                className="border p-2 m-2"
+                className="border p-2 rounded"
               />
               <button
                 onClick={addCar}
-                className="bg-green-500 text-white px-4 py-2 rounded-lg"
+                className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
               >
                 Add Car
               </button>
@@ -153,7 +153,7 @@ const Poster = () => {
         <div
           id="poster"
           ref={posterRef}
-          className="max-w-screen-lg mx-auto p-4 rounded shadow-md"
+          className="max-w-screen-lg mx-auto p-4 rounded shadow-md bg-gray-50"
         >
           {/* Header */}
           <div className="flex items-center justify-center mb-8 bg-black p-4 rounded-xl text-white flex-row-reverse">
@@ -176,13 +176,13 @@ const Poster = () => {
             {cars.slice(0, 6).map((car, index) => (
               <div
                 key={index}
-                className="border border-gray-300 rounded-lg p-4 relative"
+                className="border border-gray-300 rounded-lg p-4 relative hover:shadow-lg transition"
                 onClick={() => handlePosterClick(index)}
               >
                 {selectedPoster === index && (
                   <button
                     onClick={() => deleteCar(index)}
-                    className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+                    className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 transition"
                   >
                     Delete
                   </button>
@@ -209,7 +209,7 @@ const Poster = () => {
 
         <button
           onClick={downloadPoster}
-          className="mt-8 bg-blue-500 text-white px-6 py-2 rounded-lg"
+          className="mt-8 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition w-full"
         >
           Download Poster
         </button>
