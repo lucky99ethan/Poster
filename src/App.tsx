@@ -100,8 +100,8 @@ const Poster = () => {
   };
 
   return (
-    <div className="p-8 bg-white min-h-screen">
-      <div className="max-w-screen-lg mx-auto p-4 rounded shadow-md bg-white">
+    <div className="p-8 bg-white ">
+      <div className=" mx-auto p-4 rounded shadow-md bg-white">
         {cars.length === 6 ? (
           ""
         ) : (
@@ -200,7 +200,7 @@ const Poster = () => {
                   Make: <span className="font-normal">{car.make}</span>
                 </h2>
                 <p className="mt-2 font-bold">
-                  Milage/Engine Model: <span className="font-normal">{car.model}</span> |
+                 Engine Model: <span className="font-normal">{car.model}</span> |
                   Year: <span className="font-normal">{car.year}</span>
                 </p>
                 <img
