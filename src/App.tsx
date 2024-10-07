@@ -92,6 +92,13 @@ const Poster = () => {
     setSelectedPoster((prevSelected) => (prevSelected === index ? null : index));
   };
 
+  const formatPrice = (price: string) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'decimal',
+      minimumFractionDigits: 0,
+    }).format(Number(price));
+  };
+
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
       <div className="max-w-screen-lg mx-auto p-4 rounded shadow-md bg-white">
@@ -200,7 +207,7 @@ const Poster = () => {
                   className="mt-4 h-48 w-full object-cover rounded-md"
                 />
                 <p className="mt-2 font-bold">
-                  Price: <span className="font-normal">{car.price}</span>
+                  Price: Tsh - <span className="font-normal">{formatPrice(car.price)}</span>
                 </p>
               </div>
             ))}
