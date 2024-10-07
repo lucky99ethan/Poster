@@ -100,8 +100,8 @@ const Poster = () => {
   };
 
   return (
-    <div className="p-8 bg-red-500 ">
-      <div className=" mx-auto p-4 rounded shadow-md bg-green-600">
+    <div className="p-8 ">
+      <div className=" mx-auto p-4 rounded shadow-md ">
         {cars.length === 6 ? (
           ""
         ) : (
@@ -160,7 +160,7 @@ const Poster = () => {
         <div
           id="poster"
           ref={posterRef}
-          className="mx-auto p-4 rounded bg-blue-100"
+          className="mx-auto p-4 rounded bg-white"
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-8 bg-black p-4 rounded-xl text-white flex-row-reverse">
