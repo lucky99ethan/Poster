@@ -102,7 +102,7 @@ const Poster = () => {
   return (
     <div className="p-8 ">
       <div className=" mx-auto p-4 rounded shadow-md ">
-        {cars.length === 6 ? (
+        {cars.length === 9 ? (
           ""
         ) : (
           <div>
@@ -182,7 +182,7 @@ const Poster = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-black">
-            {cars.slice(0, 6).map((car, index) => (
+            {cars.slice(0, 9).map((car, index) => (
               <div
                 key={index}
                 className="border border-gray-300 rounded-lg p-4 relative hover:shadow-lg transition"
