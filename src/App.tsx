@@ -206,7 +206,7 @@ const Poster = () => {
                 <img
                   src={car.imageUrl}
                   alt={car.model}
-                  className="mt-4 h-72 w-full object-contain rounded-md"
+                  className="mt-4 h-64 w-full object-contain rounded-md"
                 />
                 <p className="mt-2 font-bold">
                   Price: Tsh - <span className="font-normal">{car.price}</span>
